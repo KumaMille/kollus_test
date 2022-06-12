@@ -7,7 +7,7 @@ import com.kollus.sdk.media.util.Utils;
 public class KollusConstants {
     public static final String KEY = "1c7776237d5e5459aa9334be724b3321f6444910";
     public static final String EXPIRE_DATE = "2022/12/31";
-    public static final int SERVER_PORT = 8388;
+    public static final int SERVER_PORT = 7430;
     public static String PLAYER_ID = null;
 //    public static final boolean SUPPORT_VR      = false;
     public static final boolean SUPPORT_SCREEN_CAPTURE  = false;

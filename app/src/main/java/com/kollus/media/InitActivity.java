@@ -318,6 +318,8 @@ public class InitActivity extends BaseActivity{
 			return;
 		}
 
+
+		// adb shell am start -a android.intent.action.VIEW -d kollus:// com.kollus.media
 		String schema = null;
     	String host = null;
 		mUri = getIntent().getData();
@@ -562,6 +564,8 @@ public class InitActivity extends BaseActivity{
 
 	private void downloadOrPlay(Uri uri) {
 		String host = uri.getHost();
+
+		// adb shell am start -a android.intent.action.VIEW -d "kollus://download?url=https://v.kr.kollus.com/5ngQ0c1g&folder=base/" "kr.co.millie.millieshelf"
 
 		if("download".equalsIgnoreCase(host)) {
 			//etlim 20170902 Activity Exit ==> Broadcast Event

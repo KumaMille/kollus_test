@@ -199,7 +199,7 @@ public class DownloadService extends Service{
                 
             case DOWNLOAD_START:
             {
-            	DownloadInfo info = (DownloadInfo)msg.obj;
+            	DownloadInfo info = (DownloadInfo) msg.obj;
             	LoadTask task = new LoadTask(info);
             	mExecutor.execute(task);
             }

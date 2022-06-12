@@ -237,7 +237,7 @@ public class MultiKollusStorage {
     }
 
     public MultiKollusContent getDownloadKollusContent(String path) {
-        for(int i=0; 1<mStorageList.size(); i++) {
+        for(int i=0; i<mStorageList.size(); i++) {
             KollusContent content = mStorageList.get(i).mStorage.getDownloadKollusContent(path);
             if (content != null)
                 return new MultiKollusContent(mStorageList.get(i).mStorage, content);
