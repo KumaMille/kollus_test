@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/list_item"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+	android:padding="@dimen/margin_small">
+    <CheckBox
+        android:id="@+id/list_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/margin_small"
+        android:focusable="false"
+		android:button="@drawable/btn_check"/>
+    <LinearLayout
+	    android:id="@+id/folder_field"
+	    android:layout_width="0dip"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1"
+	    android:gravity="center"
+	    android:visibility="gone" >
+	    <ImageView 
+	        android:src="@drawable/folder"
+	        android:layout_width="100dp"
+	        android:layout_height="wrap_content"
+	        android:scaleType="fitCenter"/>
+	    <TextView android:id="@+id/folder_name"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1.0"
+	        android:paddingLeft="@dimen/margin_small"
+			android:maxLines="2"
+	        android:ellipsize="end"
+	        android:textSize="16dp"
+	        android:textColor="@android:color/white"/>
+	</LinearLayout>
+	<LinearLayout
+	    android:id="@+id/file_field"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:visibility="gone" >
+		<RelativeLayout
+		    android:layout_width="100dp"
+		    android:layout_height="80dp" >
+		    <ImageView 
+		        android:id="@+id/icon"
+		        android:src="@drawable/kollus"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:scaleType="centerCrop"/>
+			<ImageView
+		        android:id="@+id/list_drm"
+		        android:background="@drawable/drm"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignParentBottom="true"
+		        android:visibility="gone" />
+		    <TextView android:id="@+id/list_percent"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:gravity="center"
+		        android:textColor="@android:color/white"
+		        android:background="@color/darker_transparent"
+		        android:textSize="16dp" />
+		    <ImageView
+		        android:id="@+id/list_hang"
+		        android:background="@drawable/hang"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+		        android:visibility="gone" />	    
+	    </RelativeLayout>
+		<LinearLayout
+		    android:layout_width="0dip"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1.0"
+		    android:paddingLeft="@dimen/margin_small"
+		    android:paddingRight="@dimen/margin_small"
+	        android:orientation="vertical">
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:gravity="center_vertical">
+				<TextView android:id="@+id/file_name"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1.0"
+					android:maxLines="2"
+					android:textSize="16dp"
+					android:textColor="@android:color/white"
+					android:ellipsize="end"/>
+				<ImageView
+					android:src="@drawable/ic_sdcard"
+					android:id="@+id/list_location"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="6dp"
+					android:visibility="gone"/>
+			</LinearLayout>
+		    <RelativeLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:paddingTop="@dimen/margin_small"
+			    android:paddingBottom="@dimen/margin_small"
+		        android:orientation="horizontal" >
+			    <TextView android:id="@+id/play_time"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textSize="12dp"
+			        android:textColor="@color/text_color_dark_gray"
+			        android:text="00:00:00"/>
+			    <TextView android:id="@+id/duration"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentRight="true"
+			        android:textSize="12dp"
+			        android:textColor="@color/text_color_dark_gray"
+			        android:text="00:00:00"/>
+			</RelativeLayout>
+		    <ProgressBar android:id="@+id/time_progress"
+		        style="?android:attr/progressBarStyleHorizontal"
+				android:progressDrawable="@drawable/time_progress"
+		        android:layout_width="fill_parent"
+		        android:layout_height="3dp"
+		        android:max="100"
+		        android:progress="50" />
+		</LinearLayout>
+		<TextView android:id="@+id/btn_detail"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textSize="25dp"
+			android:textColor="@color/text_color_dark_gray"
+			android:text="ⓘ"
+			android:padding="@dimen/margin_small"/>
+	</LinearLayout>
+</LinearLayout>

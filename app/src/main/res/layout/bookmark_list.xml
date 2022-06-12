@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:paddingLeft="@dimen/margin_small"
+	android:paddingRight="@dimen/margin_small"
+	android:orientation="vertical"
+	android:background="@color/darker_transparent">
+	<RelativeLayout
+	    android:id="@+id/bookmark_top_layer"
+	    android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+		<TextView
+		    android:id="@+id/bookmark_count"
+		    android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:textSize="24dp"
+			android:textStyle="bold"/>
+		<LinearLayout
+	        android:id="@+id/bookmark_btn_layout"
+	        android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:orientation="horizontal"
+			android:layout_marginLeft="@dimen/margin_small">
+			<ImageView
+			    android:id="@+id/bookmark_add"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:background="@drawable/bookmark_add" />
+			<ImageView
+			    android:id="@+id/bookmark_delete"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:background="@drawable/bookmark_delete" />
+		</LinearLayout>
+		<HorizontalScrollView
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_toLeftOf="@id/bookmark_btn_layout">
+		    <RadioGroup 
+		        android:id="@+id/bookmark_kind"
+		        android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+		    </RadioGroup>		     
+		</HorizontalScrollView>
+		   	    
+	</RelativeLayout>
+	<com.kollus.media.view.BookmarkScrollView
+	    android:id="@+id/bookmark_list"
+	    android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:scrollbars="none">
+		<LinearLayout
+		    android:id="@+id/bookmark_list_layer"
+		    android:layout_width="wrap_content"
+			android:layout_height="fill_parent"
+			android:orientation="horizontal">
+		</LinearLayout>
+	</com.kollus.media.view.BookmarkScrollView>
+</LinearLayout>

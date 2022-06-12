@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kollus Test Player</string>
+    <string name="history_title">Download</string>
+    <string name="setting_title">Setting</string>
+    <string name="description_title">Description</string>
+
+    <string name="initializing_str">読み込み中...</string>
+	<string name="buffering_str">読み込み中...</string>
+	<string name="message_playback">再生終了</string>
+    
+    <string name="no_download_list">ダウンロードされたコンテンツがありません。</string>
+    <string name="download_initialize">初期化中です。\n今しばらくお待ちください。</string>
+    <string name="ERROR_MAX_BOOKMARK">ブックマークは最大%d個まで追加可能です。</string>
+    
+    <string name="resume_playing_title">レジューム</string>
+    <string name="resume_playing_message">(%s)から再生しますか?</string>
+    <string name="resume_playing_resume">レジューム</string>
+    <string name="resume_playing_restart">最初から</string>
+    
+    <string name="VideoView_error_text_invalid_progressive_playback">サポートできないコンテンツです。</string>
+    <string name="VideoView_error_button">OK</string>
+
+    <string name="restart_after_not_allowed">画面ミラーリングは利用できません。</string>
+	
+	<string name="menu_info_str">情報</string>
+	<string name="menu_setting_str">设置</string>
+	
+	<string name="expire_date">"再生期限 : "</string>
+	<string name="expire_count">"再生可能回数 : "</string>
+	<string name="expire_playtime">"再生可能時間 : "</string>
+	<string name="no_detail_data">コンテンツの詳細情報がありません。</string>
+	
+	<string name="error_rooting">脱獄されたデバイスです。\nアプリを終了します。</string>
+    <string name="error_vm">仮想マシンでは再生できません。</string>
+	
+	<string name="cpu_info">CPU Info</string>
+    <string name="processor">Processor</string>
+    <string name="frequence">Frequence</string>
+    <string name="count">Count</string>
+    
+	<string name="player_info">プレーヤー情報</string>
+    <string name="player_version">バージョン情報</string>
+    <string name="player_pref_id">識別番号</string>
+    
+	<!-- 설정 관련 텍스트  -->
+	<string name="play_rate">倍速</string>
+    <string name="sort">整列</string>
+    <string name="sort_by">整列基準</string>
+    <string name="order_by">整列方式</string>
+    <string-array name="sort_order_array">
+        <item>昇順</item>
+        <item>降順</item>
+    </string-array>
+    <string-array name="sort_type_array">
+        <item>コンテンツ名</item>
+        <item>ダウンロード日付</item>
+        <item>再生時間</item>
+        <item>容量</item>
+    </string-array>
+
+    <string name="select_seek_interval">移動範囲の選択</string>
+    <string-array name="seek_interval_array">
+        <item>5秒</item>
+        <item>10秒</item>
+        <item>20秒</item>
+        <item>30秒</item>
+        <item>60秒</item>
+        <item>300秒</item>
+    </string-array>
+
+    <string name="select_seek_type">スキップ方式設定</string>
+    <string-array name="seek_type_array">
+        <item>キーフレーム移動</item>
+        <item>タイム移動</item>
+    </string-array>
+
+    <string name="select_double_tab">ダブルタップ動作設定</string>
+    <string-array name="double_tab_array">
+        <item>画面比率</item>
+        <item>再生/一時停止</item>
+    </string-array>
+
+    <string name="storage">ストレージ</string>
+	<string name="caption">字幕</string>
+    <string name="bitrate_title">画質</string>
+	<string name="max_rate">最大倍速</string>
+    <string name="rate_2">2X</string>
+    <string name="rate_3">3X</string>
+	<string name="storage_location">保存場所</string>
+	<string name="storage_download_size">ダウンロードコンテンツ</string>
+    <string name="storage_etc_size">その他</string>
+    <string name="storage_cache_size">キャッシュ</string>
+    <string name="storage_empty_size">空き容量</string>
+    <string name="inner">内</string>
+    <string name="outer">外</string>
+	<string name="inner_storage">内装メモリー</string>
+	<string name="outer_storage">外付けメモリー</string>
+	<string name="storage_empty">キャッシュ削除</string>
+	<string name="color">色</string>
+    <string name="stroke_color">外枠</string>
+    <string name="size">サイズ</string>
+    <string name="caption_test_str">か</string>
+    <string name="caption_background_color">背景</string>
+
+    <string name="general">一般</string>
+    <string name="notify_no_wifi">3G/LTE使用アラート</string>
+    <string name="notify_no_wifi_download">モバイルネットワークに接続されています。\nダウンロードを開始しますか?</string>
+    <string name="notify_no_wifi_play">モバイルネットワークに接続されています。\n再生を開始しますか?</string>
+
+    <string name="notify_resume_playing">オートレジューム</string>
+    <string name="background_playback">バックグラウンド再生</string>
+    <string name="notify_move_market_for_update">更新のためのプレーヤーを終了した後、マーケットに移動します。</string>
+    <string name="notify_close_while_download">ダウンロード中です。\n終了しますか？</string>
+    <string name="notify_auto_time">設定メニューにて日付と時刻を「自動」で設定してください。</string>
+    <string name="sw_codec_precedence">SWコーデックの優先</string>
+    <string name="drm_refresh">DRM 一括更新</string>
+    <string name="refresh">更新</string>
+    <string name="msg_refresh_expired">期間満了のコンテンツのみ更新</string>
+    <string name="render_mode">画面レンダリング方式</string>
+    <string name="render_mode_msg">正常に再生されている場合には設定を変更しないでください。</string>
+    <string-array name="render_mode_array">
+        <item>モデル</item>
+        <item>2^</item>
+        <item>x2</item>
+        <item>x4</item>
+        <item>x16</item>
+        <item>x32</item>
+    </string-array>
+
+    <string name="FIT_SCREEN">全画面表示</string>
+    <string name="FULL_SCREEN">画面を切る</string>
+    <string name="FULL_SCREEN_STRETCH">画面に合わせる</string>
+	<string name="REAL_SIZE_SCREEN">原本サイズ</string>
+		
+    <string name="confirm">確認</string>
+    <string name="cancel">キャンセル</string>
+    <string name="copy">コピー</string>
+    <string name="play">再生</string>
+    <string name="cut">カット</string>
+    <string name="paste">ペースト</string>
+    <string name="delete">削除</string>
+    <string name="rename">名前の変更</string>
+	<string name="add_folder">フォルダ作成</string>
+    <string name="new_folder">新しいフォルダー</string>
+	<!-- <string name="error_msg_child">移動元と移動先のフォルダが同じです。</string> -->
+	<string name="error_msg_child">移動元は、移動先のサブフォルダです。</string>
+	
+	<string name="repress_backkey_for_finish">もう一度、戻るボタンをタッチするとアプリを終了します。</string>
+	<string name="repress_backkey_for_play">もう一度バックキーを押すと再生が終了されます。</string>
+
+    <string name="bookmark_all">All</string>
+    <string name="bookmark_user">Bookmark</string>
+    <string name="hide_caption">非表示</string>
+
+	<string name="stop_for_capture_tool">動画キャプチャソフトが検知されました。再生を終了します。</string>
+	
+	<string name="download_file">%1$d/%2$d ダウンロード中</string>
+    <string name="download_time">予想時間 %s</string>
+    <string name="download_drm_refresh">有効期限が切れました。\n更新しますか?</string>
+    
+    <string name="day">日</string>
+    <string name="hours">時間</string>
+    <string name="min">分</string>
+    <string name="sec">秒</string>
+    <string name="audio_sync">オーディオシンク</string>
+
+    <!-- Talkback  -->
+    <string name="talkback_setting">設定</string>
+    <string name="talkback_add_folder">フォルダー追加</string>
+    <string name="talkback_edit">編集</string>
+    <string name="talkback_edit_menu">編集メニュー</string>
+    <string name="talkback_more_menu">追加メニュー</string>
+    <string name="talkback_back">戻る</string>
+    <string name="talkback_screen_full">全体画面</string>
+    <string name="talkback_screen_full_stretch">画面に合わせる</string>
+    <string name="talkback_screen_original">原本サイズ</string>
+    <string name="talkback_screen_fit">全画面表示</string>
+    <string name="talkback_play">再生</string>
+    <string name="talkback_pause">一時停止</string>
+    <string name="talkback_rw">次へ</string>
+    <string name="talkback_ff">前へ</string>
+    <string name="talkback_mute">ミュート</string>
+    <string name="talkback_unmute">ミュート解除</string>
+    <string name="talkback_rotation_lock">画面の回転ロック</string>
+    <string name="talkback_rotation_lock_off">画面の回転ロックを解除する</string>
+    <string name="talkback_ab_repeat">リピート再生</string>
+    <string name="talkback_ab_repeat_start">リピート開始</string>
+    <string name="talkback_ab_repeat_end">リピート終了</string>
+    <string name="talkback_speed_up">倍速上げ</string>
+    <string name="talkback_speed_down">倍速下げ</string>
+    <string name="talkback_speed_normal">等倍</string>
+    <string name="talkback_repeat_on">リピート再生オン</string>
+    <string name="talkback_repeat_off">リピート再生オフ</string>
+
+    <string name="help_title">ヘルプ</string>
+    <string name="help_gesture">ジェスチャー</string>
+    <string name="help_size_control">画面拡大/縮小</string>
+    <string name="help_bright_control">明るさ調整</string>
+    <string name="help_volume_control">音量調整</string>
+    <string name="help_seek">シーク</string>
+    <string name="help_short_cuts">ショートカット</string>
+    <string name="help_play_pause">再生/一時停止</string>
+    <string name="help_ff">前へ</string>
+    <string name="help_rw">次へ</string>
+    <string name="help_vol_up">音量大きく</string>
+    <string name="help_vol_down">音量小さく</string>
+    <string name="help_mute_unmute">消音/ミュート解除</string>
+    <string name="help_speed_down">再生スピードを上げる</string>
+    <string name="help_speed_up">再生スピードを下げる</string>
+    <string name="help_speed_normal">基本倍速</string>
+    <string name="help_ab_repeat_a">リピート再生の開始</string>
+    <string name="help_ab_repeat_b">リピート再生の終了</string>
+    <string name="help_ab_repeat_disable">リピート再生の解除</string>
+</resources>

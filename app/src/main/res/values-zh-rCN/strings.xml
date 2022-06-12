@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kollus Test Player</string>
+    <string name="history_title">Download</string>
+    <string name="setting_title">Setting</string>
+    <string name="description_title">Description</string>
+
+    <string name="initializing_str">正在载入...</string>
+	<string name="buffering_str">正在缓冲...</string>
+	<string name="message_playback">播放完了</string>
+    <string name="no_download_list">播放列表上没有内容。</string>
+    <string name="download_initialize">正在下载初始化。\n请稍等。</string>
+    <string name="ERROR_MAX_BOOKMARK">书签数量限制：书签最大可以%d个使用。</string>
+	
+    <string name="resume_playing_title">继续播放</string>
+    <string name="resume_playing_message">从(%s)继续播放吗？</string>
+    <string name="resume_playing_resume">继续播放</string>
+    <string name="resume_playing_restart">从前开始播放</string>
+    
+    <string name="VideoView_error_text_invalid_progressive_playback">不支持播放形式。</string>
+    <string name="VideoView_error_button">确认</string>
+
+    <string name="restart_after_not_allowed">不允许屏幕镜像。</string>
+	
+	<string name="menu_info_str">信息</string>
+	<string name="menu_setting_str">设置</string>
+	
+	<string name="expire_date">"播放有效期间 : "</string>
+	<string name="expire_count">"播放有效数次 : "</string>
+	<string name="expire_playtime">"播放有效时间 : "</string>
+	<string name="no_detail_data">这部视频没有详细信息。</string>
+	
+	<string name="error_rooting">越狱过的机器不能使用。\n应用关闭。</string>
+    <string name="error_vm">保安政策：在虚拟机上不可播放。</string>
+	
+	<string name="cpu_info">CPU Info</string>
+    <string name="processor">Processor</string>
+    <string name="frequence">Frequence</string>
+    <string name="count">Count</string>
+    
+	<string name="player_info">播放器信息</string>
+    <string name="player_version">版本</string>
+    <string name="player_pref_id">用户名</string>
+    
+	<!-- 설정 관련 텍스트  -->
+	<string name="play_rate">播放速度</string>
+    <string name="sort">类别</string>
+    <string name="sort_by">排列方式</string>
+    <string name="order_by">排序方法</string>
+    <string-array name="sort_order_array">
+        <item>升序</item>
+        <item>降序</item>
+    </string-array>
+    <string-array name="sort_type_array">
+        <item>内容名称</item>
+        <item>下载日子</item>
+        <item>播放时间</item>
+        <item>容量</item>
+    </string-array>
+
+    <string name="select_seek_interval">选择移动范围</string>
+    <string-array name="seek_interval_array">
+        <item>5秒</item>
+        <item>10秒</item>
+        <item>20秒</item>
+        <item>30秒</item>
+        <item>60秒</item>
+        <item>300秒</item>
+    </string-array>
+
+    <string name="select_seek_type">AB段移动方式</string>
+    <string-array name="seek_type_array">
+        <item>快速移动</item>
+        <item>准确移动</item>
+    </string-array>
+
+    <string name="select_double_tab">双击设置</string>
+    <string-array name="double_tab_array">
+        <item>屏幕比例</item>
+        <item>播放/暂停</item>
+    </string-array>
+
+	<string name="storage">存储空间</string>
+	<string name="caption">字幕</string>
+    <string name="bitrate_title">画质</string>
+	<string name="max_rate">最大速度</string>
+    <string name="rate_2">2X</string>
+    <string name="rate_3">3X</string>
+    <string name="storage_location">存储位置</string>
+    <string name="storage_download_size">下载的内容</string>
+    <string name="storage_etc_size">其他</string>
+    <string name="storage_cache_size">高速缓存</string>
+    <string name="storage_empty_size">可用空间</string>
+    <string name="inner">内</string>
+    <string name="outer">外</string>
+	<string name="inner_storage">内置存储</string>
+	<string name="outer_storage">外置存储</string>
+	<string name="storage_empty">清除高速缓存</string>
+	<string name="color">颜色</string>
+    <string name="stroke_color">边界</string>
+    <string name="size">大小</string>
+    <string name="caption_test_str">天</string>
+    <string name="caption_background_color">背景</string>
+    
+    <string name="general">一般</string>
+    <string name="notify_no_wifi">移动网络使用警告</string>
+    <string name="background_playback">背景播放</string>
+    <string name="notify_no_wifi_download">链接移动网络。\n开始下载吗？</string>
+    <string name="notify_no_wifi_play">链接移动网络。\n开始播放吗？</string>
+
+    <string name="notify_resume_playing">循环观看</string>
+    <string name="notify_move_market_for_update">应用版本更新：退出应用翻到应用商场。</string>
+    <string name="notify_close_while_download">正在下载。\n您确认关闭吗？</string>
+    <string name="notify_auto_time">请尝试设定”使用网络提供时间“。</string>
+    <string name="sw_codec_precedence">有优先软件编解码器。</string>
+    <string name="drm_refresh">DRM全部更新</string>
+    <string name="refresh">更新</string>
+    <string name="msg_refresh_expired">选定打勾，已过期内容限更新。</string>
+    <string name="render_mode">屏幕渲染方法</string>
+    <string name="render_mode_msg">如果正常播放，请不要更改设置。</string>
+    <string-array name="render_mode_array">
+        <item>模型</item>
+        <item>2^</item>
+        <item>x2</item>
+        <item>x4</item>
+        <item>x16</item>
+        <item>x32</item>
+    </string-array>
+
+    <string name="FIT_SCREEN">调整为屏幕大小</string>
+    <string name="FULL_SCREEN">全屏幕（过扫描）</string>
+    <string name="FULL_SCREEN_STRETCH">全屏幕</string>
+	<string name="REAL_SIZE_SCREEN">普通尺寸</string>
+	
+    <string name="confirm">确认</string>
+    <string name="cancel">取消</string>
+    <string name="copy">复制</string>
+    <string name="play">播放</string>
+    <string name="cut">剪切</string>
+    <string name="paste">粘贴</string>
+    <string name="delete">删除</string>
+    <string name="rename">改名</string>
+    <string name="add_folder">创建文件夹</string>
+    <string name="new_folder">新建文件夹</string>
+    <string name="error_msg_child">目标文件夹是源文件夹的子文件夹。</string>
+    
+    <string name="repress_backkey_for_finish">再次按返回，应用退出。</string>
+    <string name="repress_backkey_for_play">再次按“取消”结束应用。</string>
+
+    <string name="bookmark_all">All</string>
+    <string name="bookmark_user">Bookmark</string>
+    <string name="hide_caption">隐藏</string>
+
+    <string name="stop_for_capture_tool">停止播放：检测到屏幕录像工具或者截图工具。</string>
+    
+    <string name="download_file">%1$d/%2$d 正在下载</string>
+    <string name="download_time">剩余时间 %s</string>
+    <string name="download_drm_refresh">DRM已过期。\n您要更新吗？</string>
+
+    <string name="day">日</string>
+    <string name="hours">时间</string>
+    <string name="min">分</string>
+    <string name="sec">秒</string>
+    <string name="audio_sync">音频同步</string>
+
+    <!-- Talkback  -->
+    <string name="talkback_setting">设置</string>
+    <string name="talkback_add_folder">新建文件夹</string>
+    <string name="talkback_edit">编辑</string>
+    <string name="talkback_edit_menu">编辑菜单</string>
+    <string name="talkback_more_menu">附加菜单</string>
+    <string name="talkback_back">返回</string>
+    <string name="talkback_screen_full">全屏</string>
+    <string name="talkback_screen_full_stretch">全屏幕</string>
+    <string name="talkback_screen_original">正常屏幕</string>
+    <string name="talkback_screen_fit">调整为屏幕大小</string>
+    <string name="talkback_play">播放</string>
+    <string name="talkback_pause">暂停</string>
+    <string name="talkback_rw">倒带</string>
+    <string name="talkback_ff">前进播放</string>
+    <string name="talkback_mute">静音</string>
+    <string name="talkback_unmute">取消静音</string>
+    <string name="talkback_rotation_lock">锁定屏幕旋转</string>
+    <string name="talkback_rotation_lock_off">解锁屏幕旋转</string>
+    <string name="talkback_ab_repeat">AB段重复播放</string>
+    <string name="talkback_ab_repeat_start">设置A点</string>
+    <string name="talkback_ab_repeat_end">设置B点</string>
+    <string name="talkback_speed_up">加快播放</string>
+    <string name="talkback_speed_down">减慢播放</string>
+    <string name="talkback_speed_normal">正常速度</string>
+    <string name="talkback_repeat_on">设置单个循环</string>
+    <string name="talkback_repeat_off">取消单个循环</string>
+
+    <string name="help_title">帮助</string>
+    <string name="help_gesture">手势</string>
+    <string name="help_size_control">屏幕放大 / 缩小</string>
+    <string name="help_bright_control">亮度调节</string>
+    <string name="help_volume_control">音量调节</string>
+    <string name="help_seek">移动</string>
+    <string name="help_short_cuts">快捷键</string>
+    <string name="help_play_pause">播放/暂停</string>
+    <string name="help_ff">前进播放</string>
+    <string name="help_rw">倒带</string>
+    <string name="help_vol_up">提高音量</string>
+    <string name="help_vol_down">减小音量</string>
+    <string name="help_mute_unmute">静音/取消静音</string>
+    <string name="help_speed_down">减慢播放</string>
+    <string name="help_speed_up">加快播放</string>
+    <string name="help_speed_normal">正常速度</string>
+    <string name="help_ab_repeat_a">设置A点</string>
+    <string name="help_ab_repeat_b">设置B点</string>
+    <string name="help_ab_repeat_disable">取消AB段循环播放</string>
+</resources>

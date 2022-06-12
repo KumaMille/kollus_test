@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	  android:layout_width="fill_parent"
+	  android:layout_height="fill_parent">
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="vertical"
+		android:background="@color/app_background_color">
+		<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:background="@color/progress_blue_color" >
+			<ImageView
+				android:id="@+id/btn_back"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="@dimen/margin"
+				android:layout_alignParentLeft="true"
+				android:src="@drawable/ic_back" />
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:layout_marginTop="@dimen/margin_small"
+				android:layout_marginBottom="@dimen/margin_small"
+				android:text="@string/setting_title"
+				android:textSize="20dip"
+				android:textColor="@android:color/white"
+				android:textStyle="bold" />
+		</RelativeLayout>
+		<ScrollView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+			<LinearLayout
+				android:id="@+id/preference_root"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"/>
+		</ScrollView>
+	</LinearLayout>
+	<LinearLayout
+		android:id="@+id/drm_refresh_processing"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/darker_transparent"
+		android:gravity="center"
+		android:clickable="false"
+		android:visibility="gone">
+		<ProgressBar
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+	</LinearLayout>
+
+</RelativeLayout>

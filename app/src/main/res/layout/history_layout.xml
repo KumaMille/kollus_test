@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/app_background_color">
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/progress_blue_color" >
+		<ImageView
+			android:id="@+id/btn_setting"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:padding="@dimen/margin"
+			android:src="@drawable/ic_setting"
+			android:contentDescription="@string/talkback_setting" />
+		<TextView
+            android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerInParent="true"
+	        android:text="@string/history_title"
+	        android:textSize="20dip"
+	        android:textColor="@android:color/white"
+	        android:textStyle="bold" />
+        
+        <LinearLayout 
+            android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="@dimen/margin_small"
+	        android:layout_centerVertical="true"
+	        android:layout_alignParentRight="true">
+			<androidx.mediarouter.app.MediaRouteButton
+				android:id="@+id/cast"
+				android:layout_width="32dp"
+				android:layout_height="32dp"
+				android:visibility="gone" />
+
+			<ImageView
+				android:id="@+id/btn_add_folder"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="@dimen/margin_small"
+				android:src="@drawable/ic_menu_add"
+				android:contentDescription="@string/talkback_add_folder"/>
+			<ImageView
+				android:id="@+id/btn_edit_menu"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="@dimen/margin_small"
+				android:src="@drawable/ic_menu_edit"
+				android:contentDescription="@string/talkback_edit_menu"/>
+			<ImageView 
+				android:id="@+id/btn_more_menu"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="@dimen/margin_small"
+				android:src="@drawable/ic_menu_moreoverflow"
+				android:visibility="gone"
+				android:contentDescription="@string/talkback_more_menu"/>
+        </LinearLayout>
+        
+    </RelativeLayout>
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:gravity="center"
+		android:background="@color/seperator_color">
+		<TextView
+			android:id="@+id/history_title"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:padding="@dimen/margin"
+			android:textSize="16dip"
+			android:textColor="@android:color/white" />
+	</LinearLayout>
+    
+    <TextView
+        android:id="@+id/no_list"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:padding="@dimen/margin"
+		android:text="@string/no_download_list"
+		android:textSize="16dip"
+	    android:textColor="@android:color/white"
+	    android:visibility="gone" />
+	<androidx.core.widget.NestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1.0">
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/contents_list"
+			android:listSelector="@drawable/list_selector"
+			android:cacheColorHint="#00000000"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:nestedScrollingEnabled="false"/>
+	</androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

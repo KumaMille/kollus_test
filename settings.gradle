@@ -1,0 +1,2 @@
+include ':app', ':KollusPlayer_SDK', ':vrlib'
+rootProject.name='KollusPlayer_TestApp'

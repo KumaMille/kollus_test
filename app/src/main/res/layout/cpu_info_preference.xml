@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+	    android:padding="@dimen/margin"
+   	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/title_background_color">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cpu_info"
+            android:textSize="16dp" />
+	</LinearLayout>
+        
+	<LinearLayout
+	    android:padding="@dimen/margin"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="@string/processor"
+            android:textSize="16dip" />
+        <TextView
+            android:id="@+id/cpu_processor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/seperator_color" />
+	<LinearLayout
+	    android:padding="@dimen/margin"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="@string/frequence"
+            android:textSize="16dp" />
+        <TextView
+            android:id="@+id/cpu_frequence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"/>
+    </LinearLayout>
+</LinearLayout>

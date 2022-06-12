@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+	    android:padding="@dimen/margin"
+   	    android:background="@color/title_background_color">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/caption"
+            android:textSize="16dp" />
+	</LinearLayout>
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+	    android:padding="@dimen/margin"
+   	    android:gravity="center_vertical">
+		<TextView 
+			android:layout_width="0dip"
+			android:layout_height="wrap_content"
+			android:layout_weight="1.0"
+			android:text="@string/size"
+			android:textSize="16dp" />
+		<!-- SeekBar 
+			android:id="@+id/pref_caption_size"
+			style="?android:attr/progressBarStyleHorizontal"
+			android:layout_width="0dip"
+			android:layout_weight="1"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/margin_long"
+			android:layout_marginRight="@dimen/margin_long"
+			android:max="25"
+			android:progress="0"
+			android:secondaryProgress="0" / -->		
+		<TextView 
+		    android:id="@+id/caption_test_view"
+		    android:text="@string/caption_test_str"
+		    android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="@android:color/white"
+			android:padding="@dimen/margin_small" />		
+		<Button
+		    android:id="@+id/caption_size_decrease"
+		    android:text="-"
+		    style="@style/ButtonStyle"
+			android:layout_marginLeft="@dimen/margin"
+			android:layout_marginRight="@dimen/margin"/>
+		<TextView 
+		    android:id="@+id/caption_size_view"
+		    android:text="10dp"
+		    android:textSize="16dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+		<Button
+		    android:id="@+id/caption_size_increase"
+		    android:text="+"
+			style="@style/ButtonStyle"
+			android:layout_marginLeft="@dimen/margin"/>
+	</LinearLayout>
+	<TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="2dp"
+	        android:background="@color/seperator_color" />
+    <LinearLayout 
+	    android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:padding="@dimen/margin"
+   	    android:gravity="center_vertical">
+		<TextView 
+			android:layout_width="0dip"
+			android:layout_height="wrap_content"
+			android:layout_weight="1.0"
+			android:text="@string/color"
+			android:textSize="16dp"/>
+		<TextView 
+			android:id="@+id/color_view"
+			android:layout_width="@dimen/preference_color_field_size"
+			android:layout_height="@dimen/preference_color_field_size"/>
+	</LinearLayout>
+	<TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="2dp"
+	        android:background="@color/seperator_color" />
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+	    android:padding="@dimen/margin"
+   	    android:gravity="center">
+		<TextView 
+			android:layout_width="0dip"
+			android:layout_height="wrap_content"
+			android:layout_weight="1.0"
+			android:text="@string/stroke_color"
+			android:textSize="16dp" />
+		<androidx.appcompat.widget.SwitchCompat
+		    android:id="@+id/stroke"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+            android:textOn = "YES"
+            android:textOff = "NO" />
+		<TextView 
+			android:id="@+id/stroke_color_view"
+			android:layout_width="@dimen/preference_color_field_size"
+			android:layout_height="@dimen/preference_color_field_size"/>
+	</LinearLayout>
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="2dp"
+		android:background="@color/seperator_color" />
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:padding="@dimen/margin"
+		android:gravity="center">
+		<TextView
+			android:layout_width="0dip"
+			android:layout_height="wrap_content"
+			android:layout_weight="1.0"
+			android:text="@string/caption_background_color"
+			android:textSize="16dp" />
+		<androidx.appcompat.widget.SwitchCompat
+			android:id="@+id/caption_bg"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textOn = "YES"
+			android:textOff = "NO" />
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:padding="@dimen/margin"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/title_background_color">
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/general"
+			android:textSize="16dip" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_margin="@dimen/margin"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		<TextView
+			android:layout_width="0dip"
+			android:layout_height="wrap_content"
+			android:layout_weight="1.0"
+			android:text="@string/notify_no_wifi"
+			android:textSize="16dp" />
+		<androidx.appcompat.widget.SwitchCompat
+			android:id="@+id/notify_no_wifi"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textOn = "YES"
+			android:textOff = "NO" />
+	</LinearLayout>
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="2dip"
+		android:background="@color/seperator_color" />
+	<LinearLayout
+		android:layout_margin="@dimen/margin"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		<TextView
+			android:layout_width="0dip"
+			android:layout_height="wrap_content"
+			android:layout_weight="1.0"
+			android:text="@string/notify_resume_playing"
+			android:textSize="16dp" />
+		<androidx.appcompat.widget.SwitchCompat
+			android:id="@+id/resume_playing"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textOn="YES"
+			android:textOff="NO" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/background_playback_layer"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:visibility="gone">
+		<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="2dip"
+			android:background="@color/seperator_color" />
+		<LinearLayout
+			android:layout_margin="@dimen/margin"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<TextView
+				android:layout_width="0dip"
+				android:layout_height="wrap_content"
+				android:layout_weight="1.0"
+				android:text="@string/background_playback"
+				android:textSize="16dp" />
+			<androidx.appcompat.widget.SwitchCompat
+				android:id="@+id/background_playback"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textOn = "YES"
+				android:textOff = "NO" />
+		</LinearLayout>
+	</LinearLayout>
+
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="2dip"
+		android:background="@color/seperator_color" />
+	<LinearLayout
+		android:id="@+id/sw_codec_precedence_layer"
+		android:layout_margin="@dimen/margin"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		<TextView
+			android:layout_width="0dip"
+			android:layout_height="wrap_content"
+			android:layout_weight="1.0"
+			android:text="@string/sw_codec_precedence"
+			android:textSize="16dp" />
+		<androidx.appcompat.widget.SwitchCompat
+			android:id="@+id/sw_codec_precedence"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textOn = "YES"
+			android:textOff = "NO" />
+	</LinearLayout>
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="2dip"
+		android:background="@color/seperator_color" />
+	<LinearLayout
+		android:layout_marginLeft="@dimen/margin"
+		android:layout_marginRight="@dimen/margin"
+		android:layout_marginTop="@dimen/margin"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		<LinearLayout
+			android:layout_width="0dip"
+			android:layout_height="wrap_content"
+			android:layout_weight="1.0"
+			android:orientation="vertical">
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/render_mode"
+				android:textSize="16dp"/>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/render_mode_msg"
+				android:textSize="12dp"/>
+		</LinearLayout>
+		<Spinner
+			android:id="@+id/render_mode"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="right" />
+	</LinearLayout>
+	<LinearLayout
+		android:id="@+id/lms_precedence_layer"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:visibility="gone">
+		<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="2dip"
+			android:background="@color/seperator_color" />
+		<LinearLayout
+			android:layout_margin="@dimen/margin"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<LinearLayout
+				android:layout_width="0dip"
+				android:layout_height="wrap_content"
+				android:layout_weight="1.0"
+				android:orientation="vertical">
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="진도률 데이터 전송"
+					android:textSize="16dp"/>
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="다운로드 컨텐츠 진도률 데이터의 전송 여부를 ON/OFF합니다."
+					android:textSize="12dp"/>
+			</LinearLayout>
+			<androidx.appcompat.widget.SwitchCompat
+				android:id="@+id/lms_precedence"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textOn = "YES"
+				android:textOff = "NO" />
+		</LinearLayout>
+	</LinearLayout>
+	<LinearLayout
+		android:id="@+id/send_stored_lms_layer"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:visibility="gone">
+		<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="2dip"
+			android:background="@color/seperator_color" />
+		<LinearLayout
+			android:layout_margin="@dimen/margin"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<LinearLayout
+				android:layout_width="0dip"
+				android:layout_height="wrap_content"
+				android:layout_weight="1.0"
+				android:orientation="vertical">
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="저장된 진도률 데이터 전송"
+					android:textSize="16dp"/>
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="저장된 다운로드 컨텐츠 진도률 데이터의 전송합니다."
+					android:textSize="12dp"/>
+			</LinearLayout>
+			<Button
+				android:id="@+id/send_stored_lms"
+				android:text="전송"
+				android:textSize="16dp"
+				style="@style/ButtonStyle" />
+		</LinearLayout>
+	</LinearLayout>
+	<LinearLayout
+		android:id="@+id/drm_all_refresh_layer"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+		<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="2dip"
+			android:background="@color/seperator_color" />
+		<LinearLayout
+			android:layout_marginLeft="@dimen/margin"
+			android:layout_marginRight="@dimen/margin"
+			android:layout_marginTop="@dimen/margin"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<TextView
+				android:layout_width="0dip"
+				android:layout_height="wrap_content"
+				android:layout_weight="1.0"
+				android:text="@string/drm_refresh"
+				android:textSize="16dp" />
+			<Button
+				android:id="@+id/drm_all_refresh"
+				android:text="@string/refresh"
+				android:textSize="16dp"
+				style="@style/ButtonStyle" />
+		</LinearLayout>
+		<CheckBox
+			android:id="@+id/refresh_only_expired"
+			android:layout_marginLeft="@dimen/margin"
+			android:layout_marginRight="@dimen/margin"
+			android:layout_marginBottom="@dimen/margin"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/msg_refresh_expired"
+			android:textSize="16dp"
+			android:checked="true"/>
+	</LinearLayout>
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="2dip"
+		android:background="@color/seperator_color" />
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:padding="@dimen/margin"
+		android:gravity="center_vertical">
+		<TextView
+			android:layout_width="0dip"
+			android:layout_height="wrap_content"
+			android:layout_weight="1.0"
+			android:text="@string/select_seek_interval"
+			android:textSize="16dp" />
+		<Spinner
+			android:id="@+id/spinner_seek_interval"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="right" />
+	</LinearLayout>
+
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="2dip"
+		android:background="@color/seperator_color" />
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:padding="@dimen/margin"
+		android:gravity="center_vertical">
+		<TextView
+			android:layout_width="0dip"
+			android:layout_height="wrap_content"
+			android:layout_weight="1.0"
+			android:text="@string/select_seek_type"
+			android:textSize="16dp" />
+		<Spinner
+			android:id="@+id/spinner_seek_type"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="right" />
+	</LinearLayout>
+
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="2dip"
+		android:background="@color/seperator_color" />
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:padding="@dimen/margin"
+		android:gravity="center_vertical">
+		<TextView
+			android:layout_width="0dip"
+			android:layout_height="wrap_content"
+			android:layout_weight="1.0"
+			android:text="@string/select_double_tab"
+			android:textSize="16dp" />
+		<Spinner
+			android:id="@+id/spinner_double_tab"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="right" />
+	</LinearLayout>
+</LinearLayout>

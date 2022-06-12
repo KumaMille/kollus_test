@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/screenshot_item"
+	android:layout_width="135dip"
+	android:layout_height="100dip"
+	android:padding="3dp"
+	android:background="@color/text_color_gray"
+	android:visibility="gone">
+	<ImageView 
+		android:id="@+id/screenshot_thumbnail"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:scaleType="fitXY" />
+    <TextView android:id="@+id/screenshot_time"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:textSize="15dp"
+		android:textColor="@android:color/white"
+		android:textStyle="bold"
+		android:shadowColor="#ff000000"
+		android:shadowRadius="5"/>
+</RelativeLayout>

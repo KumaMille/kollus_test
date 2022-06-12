@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">콜러스 테스트 플레이어</string>
+    <string name="history_title">다운로드</string>
+    <string name="setting_title">설정</string>
+    <string name="description_title">상세정보</string>
+
+    <string name="initializing_str">로딩 중...</string>
+	<string name="buffering_str">버퍼링 중...</string>
+	<string name="message_playback">재생 완료</string>
+    <string name="no_download_list">다운로드된 리스트가 없습니다.</string>
+    <string name="download_initialize">다운로드 초기화 작업을 진행중입니다.\n잠시만 기다려 주십시오.</string>
+    <string name="ERROR_MAX_BOOKMARK">북마크 최대개수 제한- 북마크는 최대 %d개 까지만 사용할 수 있습니다.</string>
+	
+    <string name="resume_playing_title">이어 보기</string>
+    <string name="resume_playing_message">이전 재생위치(%s)부터 재생하시겠습니까?</string>
+    <string name="resume_playing_resume">이어보기</string>
+    <string name="resume_playing_restart">처음부터</string>
+    
+    <string name="VideoView_error_text_invalid_progressive_playback">미지원 스트리밍 형식입니다.</string>
+    <string name="VideoView_error_button">확인</string>
+    
+	<string name="restart_after_not_allowed">화면미러링은 허용되지 않습니다.</string>
+	
+	<string name="menu_info_str">정보</string>
+	<string name="menu_setting_str">설정</string>
+	
+	<string name="expire_date">"재생가능 기간 : "</string>
+	<string name="expire_count">"재생가능 횟수 : "</string>
+	<string name="expire_playtime">"재생가능 시간 : "</string>
+	<string name="no_detail_data">컨텐츠 상세정보가 없습니다.</string>
+	
+	<string name="error_rooting">탈옥된 기기입니다.\n프로그램을 종료합니다.</string>
+    <string name="error_vm">가상머신에서는 재생할 수 없습니다.</string>
+	
+	<string name="cpu_info">CPU Info</string>
+    <string name="processor">Processor</string>
+    <string name="frequence">Frequence</string>
+    <string name="count">Count</string>
+    
+	<string name="player_info">플레이어 정보</string>
+    <string name="player_version">버전</string>
+    <string name="player_pref_id">아이디</string>
+    
+	<!-- 설정 관련 텍스트  -->
+	<string name="play_rate">배속</string>
+    <string name="sort">정렬</string>
+    <string name="sort_by">정렬기준</string>
+    <string name="order_by">정렬방식</string>
+    <string-array name="sort_order_array">
+        <item>오름차순</item>
+        <item>내림차순</item>
+    </string-array>
+    <string-array name="sort_type_array">
+        <item>컨텐츠명</item>
+        <item>다운로드 날짜</item>
+        <item>재생시간</item>
+        <item>용량</item>
+    </string-array>
+
+    <string name="select_seek_interval">이동범위 선택</string>
+    <string-array name="seek_interval_array">
+        <item>5초</item>
+        <item>10초</item>
+        <item>20초</item>
+        <item>30초</item>
+        <item>60초</item>
+        <item>300초</item>
+    </string-array>
+
+    <string name="select_seek_type">구간 이동 방식</string>
+    <string-array name="seek_type_array">
+        <item>빠른 탐색</item>
+        <item>정확한 탐색</item>
+    </string-array>
+
+    <string name="select_double_tab">더블탭 동작 선택</string>
+    <string-array name="double_tab_array">
+        <item>화면비율</item>
+        <item>재생/일시정지</item>
+    </string-array>
+
+	<string name="storage">저장소</string>
+	<string name="caption">자막</string>
+    <string name="bitrate_title">화질</string>
+	<string name="max_rate">최대 배속</string>
+    <string name="rate_2">2X</string>
+    <string name="rate_3">3X</string>
+    <string name="storage_location">저장위치</string>
+    <string name="storage_download_size">다운로드 컨텐츠</string>
+    <string name="storage_etc_size">기타</string>
+    <string name="storage_cache_size">캐시</string>
+    <string name="storage_empty_size">남은 용량</string>
+    <string name="inner">내장</string>
+    <string name="outer">외장</string>
+	<string name="inner_storage">내장메모리</string>
+	<string name="outer_storage">외장메모리</string>
+    <string name="storage_empty">캐시 비우기</string>
+	<string name="color">색상</string>
+    <string name="stroke_color">테두리</string>
+    <string name="size">크기</string>
+    <string name="caption_test_str">가</string>
+    <string name="caption_background_color">배경</string>
+    
+    <string name="general">일반</string>
+    <string name="notify_no_wifi">3G/LTE 사용시 알림</string>
+    <string name="notify_no_wifi_download">3G/LTE 등으로 접속 시\n데이터 통화료가 발생할 수 있습니다.</string>
+    <string name="notify_no_wifi_play">3G/LTE 등으로 접속 시\n데이터 통화료가 발생할 수 있습니다.</string>
+
+    <string name="notify_resume_playing">자동 이어보기</string>
+    <string name="background_playback">백그라운드 재생</string>
+    <string name="notify_move_market_for_update">업데이트를 위해 플레이어를 종료 후 마켓으로 이동합니다.</string>
+    <string name="notify_close_while_download">다운로드 중입니다.\n종료하시겠습니까?</string>
+    <string name="notify_auto_time">시스템 설정화면에서 시간을 자동으로 설정하세요.</string>
+    <string name="sw_codec_precedence">SW 코덱 우선</string>
+    <string name="drm_refresh">DRM 일괄 갱신</string>
+    <string name="refresh">갱신</string>
+    <string name="msg_refresh_expired">만료된 컨텐츠만 갱신</string>
+    <string name="render_mode">화면렌더링방식</string>
+    <string name="render_mode_msg">영상이 정상 재생될 경우 본 설정을 변경하지 마시기 바랍니다.</string>
+    <string-array name="render_mode_array">
+        <item>모델</item>
+        <item>2^</item>
+        <item>x2</item>
+        <item>x4</item>
+        <item>x16</item>
+        <item>x32</item>
+    </string-array>
+
+    <string name="FIT_SCREEN">화면에 맞춤</string>
+    <string name="FULL_SCREEN">화면 자름</string>
+    <string name="FULL_SCREEN_STRETCH">꽉찬 화면</string>
+	<string name="REAL_SIZE_SCREEN">원본 사이즈</string>
+	
+    <string name="confirm">확인</string>
+    <string name="cancel">취소</string>
+    <string name="copy">복사</string>
+    <string name="play">재생</string>
+    <string name="cut">잘라내기</string>
+    <string name="paste">붙여넣기</string>
+    <string name="delete">삭제</string>
+    <string name="rename">이름변경</string>
+    <string name="add_folder">폴더 추가</string>
+    <string name="new_folder">새폴더</string>
+    <string name="error_msg_child">대상폴더가 현재폴더의 하위폴더입니다.</string>
+    
+    <string name="repress_backkey_for_finish">다시 한번 뒤로가기를 누르면 앱이 종료됩니다.</string>
+    <string name="repress_backkey_for_play">다시 한번 뒤로가기를 누르면 재생이 종료됩니다.</string>
+
+    <string name="bookmark_all">All</string>
+    <string name="bookmark_user">Bookmark</string>
+    <string name="hide_caption">감추기</string>
+
+    <string name="stop_for_capture_tool">캡춰 프로그램이 감지되어 재생을 중지합니다.</string>
+    
+    <string name="download_file">%1$d/%2$d 파일 다운로드 중</string>
+    <string name="download_time">예상 시간 %s</string>
+    <string name="download_drm_refresh">만료된 컨텐츠입니다.\n갱신하시겠습니까?</string>
+    
+    <string name="day">일</string>
+    <string name="hours">시간</string>
+    <string name="min">분</string>
+    <string name="sec">초</string>
+    <string name="audio_sync">오디오 싱크</string>
+
+    <!-- Talkback  -->
+    <string name="talkback_setting">설정</string>
+    <string name="talkback_add_folder">폴더 추가</string>
+    <string name="talkback_edit">편집</string>
+    <string name="talkback_edit_menu">편집 메뉴</string>
+    <string name="talkback_more_menu">추가 메뉴</string>
+    <string name="talkback_back">뒤로가기</string>
+    <string name="talkback_screen_full">전체화면</string>
+    <string name="talkback_screen_full_stretch">꽉찬화면</string>
+    <string name="talkback_screen_original">원본크기</string>
+    <string name="talkback_screen_fit">화면에 맞춤</string>
+    <string name="talkback_play">재생</string>
+    <string name="talkback_pause">일시정지</string>
+    <string name="talkback_rw">뒤로 이동</string>
+    <string name="talkback_ff">앞으로 이동</string>
+    <string name="talkback_mute">음소거</string>
+    <string name="talkback_unmute">음소거 해제</string>
+    <string name="talkback_rotation_lock">화면 회전 잠금</string>
+    <string name="talkback_rotation_lock_off">화면 회전 잠금 해제</string>
+    <string name="talkback_ab_repeat">구간반복</string>
+    <string name="talkback_ab_repeat_start">구간반복 시작</string>
+    <string name="talkback_ab_repeat_end">구간반복 끝</string>
+    <string name="talkback_speed_up">배속 올림</string>
+    <string name="talkback_speed_down">배속 내림</string>
+    <string name="talkback_speed_normal">정배속</string>
+    <string name="talkback_repeat_on">반복재생 켜짐</string>
+    <string name="talkback_repeat_off">반복재생 꺼짐</string>
+
+    <string name="help_title">도움말</string>
+    <string name="help_gesture">제스쳐</string>
+    <string name="help_size_control">화면 확대/축소</string>
+    <string name="help_bright_control">밝기조절</string>
+    <string name="help_volume_control">음량조절</string>
+    <string name="help_seek">구간이동</string>
+    <string name="help_short_cuts">단축키</string>
+    <string name="help_play_pause">재생/일시정지</string>
+    <string name="help_ff">앞으로 이동</string>
+    <string name="help_rw">뒤로 이동</string>
+    <string name="help_vol_up">음량 키우기</string>
+    <string name="help_vol_down">음량 줄이기</string>
+    <string name="help_mute_unmute">음소거/음소거 해제</string>
+    <string name="help_speed_down">속도 느리게</string>
+    <string name="help_speed_up">속도 빠르게</string>
+    <string name="help_speed_normal">기본속도</string>
+    <string name="help_ab_repeat_a">구간반복 시작</string>
+    <string name="help_ab_repeat_b">구간반복 종료</string>
+    <string name="help_ab_repeat_disable">구간반복 해제</string>
+</resources>

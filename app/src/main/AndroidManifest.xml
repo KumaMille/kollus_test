@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kollus.media">
+
+    <!--uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--uses-permission android:name="android.permission.WRITE_SETTINGS" /-->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- HDMI Permission -->
+    <uses-permission android:name="android.permission.com.android.vending.CHECK_LICENSE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" android:required="false" />
+    <!-- Audio Equalizer -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- getRunningTasks -->
+    <!--uses-permission android:name="android.permission.GET_TASKS"/-->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <!--uses-library android:name="org.apache.http.legacy" android:required="false" /-->
+        <meta-data
+            android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME"
+            android:value="com.kollus.media.util.CastOptionsProvider"/>
+        <activity
+            android:name=".InitActivity"
+            android:configChanges="orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="kollus" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".InfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HistoryActivity"
+            android:configChanges="keyboard|keyboardHidden|uiMode|orientation|screenSize|screenLayout|smallestScreenSize|navigation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".MovieActivity"
+            android:configChanges="keyboard|keyboardHidden|uiMode|orientation|screenSize|screenLayout|smallestScreenSize|navigation"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensor"
+            android:windowSoftInputMode="adjustResize" />
+        <receiver android:name=".MovieActivity$MediaButtonReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".preference.PlayerPreference"
+            android:configChanges="keyboard|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contents.KollusContentDetail"
+            android:configChanges="keyboard|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GuideShortCutsActivity"
+            android:configChanges="keyboard|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GuideGestureActivity"
+            android:configChanges="keyboard|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <!--
+        <receiver android:name=".util.ApplicationReceiver">
+			<intent-filter>
+				<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+			</intent-filter>
+		</receiver>
+        -->
+        <service
+            android:name=".download.DownloadService"
+            android:exported="false" />
+
+        <service
+            android:name=".MoviePlayerService"
+            android:exported="false" />
+
+        <activity
+            android:name=".BaseActivity"
+            android:configChanges="keyboard|keyboardHidden" />
+    </application>
+
+</manifest>

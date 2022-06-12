@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="default_play_rate">2</integer>
+    <integer name="default_caption_size">15</integer>
+    <color name="default_caption_color">#ffffffff</color>
+    <color name="default_stroke_color">#ff000000</color>
+    <bool name="default_stroke">true</bool>
+    <color name="default_caption_bg_color">#ff000000</color>
+    <bool name="default_force_nscreen">false</bool>
+    <bool name="default_background_play">false</bool>
+</resources>

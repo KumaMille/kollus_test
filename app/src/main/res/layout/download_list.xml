@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/list_item"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/margin_small">
+    <RelativeLayout
+	    android:layout_width="100dp"
+	    android:layout_height="60dp" >
+		<ImageView 
+			android:id="@+id/icon"
+			android:src="@drawable/kollus"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:scaleType="centerCrop"/>
+		<TextView android:id="@+id/list_percent"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:gravity="center"
+	        android:textColor="@android:color/white"
+	        android:background="@color/darker_transparent"
+	        android:textSize="16dp" />
+	</RelativeLayout>
+	<LinearLayout
+	    android:layout_width="0dip"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1.0"
+	    android:paddingLeft="@dimen/margin_small"
+	    android:paddingRight="@dimen/margin_small"
+        android:orientation="vertical">
+		<TextView android:id="@+id/file_name"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:maxLines="2"
+			android:textSize="16dp"
+			android:textColor="@android:color/white"
+			android:ellipsize="end"/>
+		<ProgressBar android:id="@+id/download_progress"
+	        style="?android:attr/progressBarStyleHorizontal"
+			android:progressDrawable="@drawable/time_progress"
+	        android:layout_width="fill_parent"
+			android:layout_height="3dp"
+	        android:max="100"
+	        android:progress="0" />
+	    <TextView android:id="@+id/file_size"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:singleLine="true"
+	        android:textSize="12dp"
+	        android:textColor="@color/text_color_dark_gray"/>
+	</LinearLayout>
+	<ImageView 
+        android:id="@+id/download_cancel"
+        android:src="@drawable/bookmark_delete_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+	<LinearLayout
+		android:id="@+id/device_info"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:visibility="gone">
+		<LinearLayout
+			android:padding="@dimen/margin"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/title_background_color">
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Device Info"
+				android:textSize="16dp" />
+		</LinearLayout>
+		<LinearLayout
+			android:padding="@dimen/margin"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<TextView
+				android:layout_width="0dip"
+				android:layout_height="wrap_content"
+				android:layout_weight="1.0"
+				android:text="Model"
+				android:textSize="16dp" />
+			<TextView
+				android:id="@+id/device_model"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="16dp" />
+		</LinearLayout>
+		<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="2dp"
+			android:background="@color/seperator_color" />
+		<LinearLayout
+			android:padding="@dimen/margin"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<TextView
+				android:layout_width="0dip"
+				android:layout_height="wrap_content"
+				android:layout_weight="1.0"
+				android:text="Board"
+				android:textSize="16dp" />
+			<TextView
+				android:id="@+id/device_board"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="16dp" />
+		</LinearLayout>
+		<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="2dp"
+			android:background="@color/seperator_color" />
+		<LinearLayout
+			android:padding="@dimen/margin"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<TextView
+				android:layout_width="0dip"
+				android:layout_height="wrap_content"
+				android:layout_weight="1.0"
+				android:text="Platform"
+				android:textSize="16dp" />
+			<TextView
+				android:id="@+id/device_platform"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="16dp" />
+		</LinearLayout>
+	</LinearLayout>
+
+    <LinearLayout
+	    android:padding="@dimen/margin"
+   	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/title_background_color">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/player_info"
+            android:textSize="16dp" />
+	</LinearLayout>
+        
+	<LinearLayout
+	    android:padding="@dimen/margin"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="@string/player_version"
+            android:textSize="16dp" />
+		<TextView
+			android:id="@+id/player_version"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textSize="16dp" />
+	</LinearLayout>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/seperator_color" />
+	<LinearLayout
+	    android:padding="@dimen/margin"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_marginRight="@dimen/margin_long"
+			android:text="@string/player_pref_id"
+            android:textSize="16dp" />
+        <TextView
+            android:id="@+id/player_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="right"
+            android:textSize="16dp"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kollus Test Player</string>
+    <string name="copyright" translatable="false">Copyright 2013 Catenoid. Inc.</string>
+    <string name="copyright_ment" translatable="false">본 제품은 오픈소스 소프트웨어를 사용하고 있습니다. 저작권 정보는 아래와 같습니다.</string>
+    <string name="license" translatable="false">License</string>
+    <string name="license_ment" translatable="false">
+"FFMPEG
+ * http://www.ffmpeg.org
+ * GNU Lesser General Public License as published by the Free Software Foundation
+
+SoundTouch
+ * http://www.surina.net/soundtouch/sourcecode.html
+ * Copyright (C) 1991, 1999 Free Software Foundation, Inc.
+ * GNU LESSER GENERAL PUBLIC LICENSE
+</string>
+
+    <string name="player_id" translatable="false">Player ID</string>
+    <string name="content_info" translatable="false">CONTENT INFO</string>
+    <string name="download_list" translatable="false">Download List</string>
+    <string name="free_size_label" translatable="false">Free(%s)</string>
+    <string name="content_size_label" translatable="false">Content(%s)</string>
+    <string name="etc_size_label" translatable="false">ETC(%s)</string>
+
+    <string name="discard" translatable="false">Discard</string>
+    <string name="info_title" translatable="false">INFO</string>
+
+    <string name="history_title">Download</string>
+    <string name="setting_title">Setting</string>
+    <string name="description_title">Description</string>
+
+    <string name="details_ms" translatable="false">%1$02d:%2$02d</string>
+    <string name="details_hms" translatable="false">%1$d:%2$02d:%3$02d</string>
+
+    <string name="error_title" translatable="false">Error</string>
+
+    <string name="media_content_key" translatable="false">media_content_key</string>
+    <string name="disk_index" translatable="false">disk_index</string>
+    <string name="preference_max_rate_key" translatable="false">max_rate</string>
+    <string name="preference_sort_type_key" translatable="false">sort_type</string>
+    <string name="preference_sort_order_key" translatable="false">sort_ascent</string>
+    <string name="preference_storage_location_key" translatable="false">storage_location</string>
+    <string name="preference_caption_color_key" translatable="false">caption_color</string>
+    <string name="preference_stroke_key" translatable="false">stroke</string>
+    <string name="preference_stroke_color_key" translatable="false">stroke_color</string>
+    <string name="preference_caption_size_key" translatable="false">caption_size</string>
+    <string name="preference_caption_bg_color_key" translatable="false">caption_bg_color</string>
+    <string name="preference_file_json_string" translatable="false">file_json_string</string>
+    <string name="preference_notify_no_wifi_key" translatable="false">notify_no_wifi</string>
+    <string name="preference_resume_play_key" translatable="false">resume_playback</string>
+    <string name="preference_background_play_key" translatable="false">background_playback</string>
+    <string name="preference_lms_send_download_content_key" translatable="false">lms_send_download_content</string>
+    <string name="preference_seek_interval_key" translatable="false">seek_interval</string>
+    <string name="preference_seek_type_key" translatable="false">seek_type</string>
+    <string name="preference_double_tab_key" translatable="false">double_tab</string>
+    <string name="preference_audio_delay_key" translatable="false">audio_delay</string>
+    <string name="preference_volume_level_key" translatable="false">save_volume_level</string>
+    <string name="preference_brightness_level_key" translatable="false">save_brightness_level</string>
+    <string name="live" translatable="false">LIVE</string>
+
+    <string name="waterMark" translatable="false">●</string>
+
+    <string name="initializing_str">Loading...</string>
+    <string name="buffering_str">Buffering...</string>
+    <string name="message_playback">Play complete.</string>
+    <string name="no_download_list">No downloaded content list.</string>
+    <string name="download_initialize">Download progress starting....\nPlease wait.</string>
+    <string name="ERROR_MAX_BOOKMARK">Limited Bookmark number - Bookmark cannot exceed max. %d</string>
+    <string name="ERROR_CODE" translatable="false">Code</string>
+
+    <string name="resume_playing_title">Continued viewing</string>
+    <string name="resume_playing_message">Continue viewing from (%s)?</string>
+    <string name="resume_playing_resume">Resume</string>
+    <string name="resume_playing_restart">Restart</string>
+
+    <string name="VideoView_error_text_invalid_progressive_playback">Unsupported video streaming format.</string>
+    <string name="VideoView_error_button">Confirm</string>
+
+    <string name="restart_after_not_allowed">Mirroring not allowed</string>
+
+    <string name="menu_info_str">Information</string>
+    <string name="menu_setting_str">Setting</string>
+
+    <string name="expire_date">"Expiration date : "</string>
+    <string name="expire_count">"Expiration count : "</string>
+    <string name="expire_playtime">"Expiration playtime : "</string>
+    <string name="no_detail_data">No content info</string>
+
+    <string name="network_not_connected" translatable="false">Disconnected.</string>
+    <string name="network_connected" translatable="false">%s is disconnected.</string>
+    <string name="error_rooting">Jailbreak Deteckted\nClosing Program</string>
+    <string name="error_vm">Cannot play on virtual marchine</string>
+
+    <string name="cpu_info">CPU Info</string>
+    <string name="processor">Processor</string>
+    <string name="frequence">Frequence</string>
+    <string name="count">Count</string>
+
+    <string name="player_info">Player Info</string>
+    <string name="player_version">Version</string>
+    <string name="player_pref_id">ID</string>
+
+    <!-- 설정 관련 텍스트  -->
+    <string name="play_rate">Playing Rate</string>
+    <string name="sort">Sort</string>
+    <string name="sort_by">Sort By</string>
+    <string name="order_by">Order By</string>
+    <string-array name="sort_order_array">
+        <item>Ascending</item>
+        <item>Descending</item>
+    </string-array>
+    <string-array name="sort_type_array">
+        <item>Content Title</item>
+        <item>Download Date</item>
+        <item>Duration</item>
+        <item>File Size</item>
+    </string-array>
+
+    <string name="select_seek_interval">Jump Interval</string>
+    <string-array name="seek_interval_array">
+        <item>5 sec</item>
+        <item>10 sec</item>
+        <item>20 sec</item>
+        <item>30 sec</item>
+        <item>60 sec</item>
+        <item>300 sec</item>
+    </string-array>
+
+    <string name="select_seek_type">Seek Type</string>
+    <string-array name="seek_type_array">
+        <item>K-frame Seek</item>
+        <item>Time Seek</item>
+    </string-array>
+
+    <string name="select_double_tab">Double Tap Settings</string>
+    <string-array name="double_tab_array">
+        <item>Display Size</item>
+        <item>Play/Pause</item>
+    </string-array>
+
+    <string name="storage">Storage</string>
+    <string name="caption">Subtitle</string>
+    <string name="bitrate_title">Quality</string>
+    <string name="max_rate">Up to speed</string>
+    <string name="rate_2">2X</string>
+    <string name="rate_3">3X</string>
+    <string name="storage_location">Storage Location</string>
+    <string name="storage_download_size">Download Content</string>
+    <string name="storage_etc_size">Etc</string>
+    <string name="storage_cache_size">Cache</string>
+    <string name="storage_empty_size">Unused Size</string>
+    <string name="inner">Int</string>
+    <string name="outer">Ext</string>
+    <string name="inner_storage">Internal Memory</string>
+    <string name="outer_storage">External Memory </string>
+    <string name="storage_empty">Clear Cache</string>
+    <string name="color">Color</string>
+    <string name="stroke_color">Border</string>
+    <string name="size">Size</string>
+    <string name="caption_test_str">Aa</string>
+    <string name="caption_background_color">Background</string>
+
+    <string name="general">General</string>
+    <string name="notify_no_wifi">3G/LTE notification</string>
+    <string name="notify_no_wifi_download">3G/LTE connected. \nStart downloading?</string>
+    <string name="notify_no_wifi_play">3G/LTE connected. \nStart playing?</string>
+
+    <string name="notify_resume_playing">Auto Continued viewing</string>
+    <string name="background_playback">Background Playback</string>
+    <string name="notify_move_market_for_update">After the end of the player for the update, go to the market.</string>
+    <string name="notify_close_while_download">Is downloading. \n Do you want to exit?</string>
+    <string name="notify_auto_time">Select automatic date <![CDATA["&"]]> time in settings.</string>
+    <string name="sw_codec_precedence">SW Codec Precedence</string>
+    <string name="show_all_contents" translatable="false">내/외장 컨텐츠 모두 보기</string>
+    <string name="drm_refresh">Renew DRM Info</string>
+    <string name="refresh">Renew</string>
+    <string name="msg_refresh_expired">Renew expired content only.</string>
+    <string name="render_mode">Rendering Mode</string>
+    <string name="render_mode_msg">Do not change this option if your device plays content properly.</string>
+    <string-array name="render_mode_array">
+        <item>Model</item>
+        <item>2^</item>
+        <item>x2</item>
+        <item>x4</item>
+        <item>x16</item>
+        <item>x32</item>
+    </string-array>
+
+    <string name="FIT_SCREEN">Fit to Screen</string>
+    <string name="FULL_SCREEN">Crop</string>
+    <string name="FULL_SCREEN_STRETCH">Fill Screen</string>
+    <string name="REAL_SIZE_SCREEN">Origial Screen Size</string>
+
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="copy">Copy</string>
+    <string name="play">Play</string>
+    <string name="cut">Cut</string>
+    <string name="paste">Paste</string>
+    <string name="delete">Delete</string>
+    <string name="rename">Rename</string>
+    <string name="add_folder">Create Folder</string>
+    <string name="new_folder">New Folder</string>
+    <string name="error_msg_child">The destination folder is a subfolder of the source folder.</string>
+
+    <string name="repress_backkey_for_finish">Press again to go back to the app quits.</string>
+    <string name="repress_backkey_for_play">Press again to stop playing.</string>
+
+    <string name="bookmark_all">All</string>
+    <string name="bookmark_user">Bookmark</string>
+    <string name="hide_caption">Off</string>
+
+    <string name="skip" translatable="false">SKIP</string>
+    <string name="stop_for_capture_tool">Play stopped. Recording tool detected.</string>
+
+    <string name="download_file">%1$d/%2$d Downloading</string>
+    <string name="download_time">Remaining time %s</string>
+    <string name="download_drm_refresh">This content has expired, Do you want to renew it now?</string>
+
+    <string name="day">d</string>
+    <string name="hours">h</string>
+    <string name="min">m</string>
+    <string name="sec">s</string>
+    <string name="audio_sync">Audio Sync</string>
+
+    <!-- Talkback  -->
+    <string name="talkback_setting">Setting</string>
+    <string name="talkback_add_folder">Add Folder</string>
+    <string name="talkback_edit">Edit</string>
+    <string name="talkback_edit_menu">Edit Menu</string>
+    <string name="talkback_more_menu">Additional Menu</string>
+    <string name="talkback_back">Back</string>
+    <string name="talkback_screen_full">Full Screen</string>
+    <string name="talkback_screen_full_stretch">Fill Screen</string>
+    <string name="talkback_screen_original">Original Size</string>
+    <string name="talkback_screen_fit">Fit</string>
+    <string name="talkback_play">Play</string>
+    <string name="talkback_pause">Pause</string>
+    <string name="talkback_rw">Rewind</string>
+    <string name="talkback_ff">Fast Forward</string>
+    <string name="talkback_mute">Mute</string>
+    <string name="talkback_unmute">Unmute</string>
+    <string name="talkback_rotation_lock">Lock screen rotation</string>
+    <string name="talkback_rotation_lock_off">Unlock screen rotation</string>
+    <string name="talkback_ab_repeat">A B Repeat</string>
+    <string name="talkback_ab_repeat_start">A B Repeat Start</string>
+    <string name="talkback_ab_repeat_end">A B Repeat End</string>
+    <string name="talkback_speed_up">Speed Up</string>
+    <string name="talkback_speed_down">Speed Down</string>
+    <string name="talkback_speed_normal">Normal Speed</string>
+    <string name="talkback_repeat_on">Repeat Play On</string>
+    <string name="talkback_repeat_off">Repeat Play Off</string>
+
+    <string name="help_title">Help</string>
+    <string name="help_gesture">Gesture</string>
+    <string name="help_size_control">Zoom In/Out</string>
+    <string name="help_bright_control">Brightness</string>
+    <string name="help_volume_control">Volume</string>
+    <string name="help_seek">Seek</string>
+    <string name="help_short_cuts">Shortcuts</string>
+    <string name="help_play_pause">Play/Pause</string>
+    <string name="help_ff">Fast Forward</string>
+    <string name="help_rw">Rewind</string>
+    <string name="help_vol_up">Volume Up</string>
+    <string name="help_vol_down">Volume Down</string>
+    <string name="help_mute_unmute">Mute/Unmute</string>
+    <string name="help_speed_down">Faster</string>
+    <string name="help_speed_up">Slower</string>
+    <string name="help_speed_normal">Normal Speed</string>
+    <string name="help_ab_repeat_a">A-B Repeat Start</string>
+    <string name="help_ab_repeat_b">A-B Repeat End</string>
+    <string name="help_ab_repeat_disable">Undo A-B Repeat</string>
+
+    <string name="app_id" translatable="false">4F8B3483</string>
+    <string name="media_route_menu_title" translatable="false">Play on&#8230;</string>
+</resources>
