@@ -16,6 +16,7 @@
 
 package com.kollus.media;
 
+import android.app.PictureInPictureParams;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothClass;
 import android.bluetooth.BluetoothDevice;
@@ -45,6 +46,7 @@ import android.preference.PreferenceManager;
 import android.provider.Settings.SettingNotFoundException;
 import android.util.Base64;
 import android.util.DisplayMetrics;
+import android.util.Rational;
 import android.view.GestureDetector;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
@@ -56,10 +58,13 @@ import android.view.WindowManager;
 import android.view.accessibility.AccessibilityManager;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
+
 import com.kollus.media.contents.MultiKollusContent;
 import com.kollus.media.preference.KollusConstants;
 import com.kollus.media.preference.ValuePreference;
 import com.kollus.media.util.ActivityStack;
+import com.kollus.media.util.AppUtil;
 import com.kollus.media.view.KollusAlertDialog;
 import com.kollus.sdk.media.content.KollusContent;
 import com.kollus.sdk.media.util.ErrorCodes;
@@ -87,8 +92,8 @@ public class MovieActivity extends BaseActivity {
 	private int mScrollNoActionTop;
 	private int mScrollNoActionBottom;
     private static final int SCROLL_MODE_N = 0;
-    private static final int SCROLL_MODE_V = 1;
-    private static final int SCROLL_MODE_H = 2;
+    private static final int SCROLL_MODE_V = 1; //수직이동
+    private static final int SCROLL_MODE_H = 2; //수평이동
 
     private static final int CONTROL_INC = 1;
     private static final int CONTROL_DEC = 2;
@@ -206,6 +211,37 @@ public class MovieActivity extends BaseActivity {
 					Log.d(TAG, String.format("BluetoothHeadsetReceiver keyCode %d", event.getKeyCode()));
 				}
 			}
+		}
+	}
+
+	//유저가 홈 버튼을 누를시
+	@Override
+	protected void onUserLeaveHint() {
+		super.onUserLeaveHint();
+		enterPipMode();
+	}
+
+	//pip 모드 진입
+	private void enterPipMode() {
+		if(AppUtil.isPipAbleSDK()) {
+			Rational aspectRatio = new Rational(16, 9);
+
+			PictureInPictureParams params = new PictureInPictureParams
+					.Builder()
+					.setAspectRatio(aspectRatio)
+					.build();
+			enterPictureInPictureMode(params);
+		}
+	}
+
+	@Override
+	public void onPictureInPictureModeChanged (boolean isInPictureInPictureMode, Configuration newConfig) {
+		if (isInPictureInPictureMode) {
+			Log.d(TAG, "isInPictureInPictureMode ");
+			// Hide the full-screen UI (controls, etc.) while in picture-in-picture mode.
+		} else {
+			// Restore the full-screen UI.
+			Log.d(TAG, "else isInPictureInPictureMode ");
 		}
 	}
 

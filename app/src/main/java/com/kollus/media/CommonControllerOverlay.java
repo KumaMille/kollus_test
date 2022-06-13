@@ -77,6 +77,7 @@ import static android.content.Context.WINDOW_SERVICE;
 
 /**
  * The common playback controller for the Movie Player or Video Trimming.
+ *  player 컨트롤러 ui 설정 및 커스텀 영역
  */
 @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
 public abstract class CommonControllerOverlay implements
@@ -192,7 +193,7 @@ public abstract class CommonControllerOverlay implements
 
     protected State mState;
 
-    protected boolean mControllerShown = false;
+    protected boolean mControllerShown = false; //controller 보일지 숨길지 여부
     protected boolean mCanReplay = true;
     protected boolean mCaptionHidden = true;
     protected boolean mResolutionHidden = true;
@@ -555,7 +556,7 @@ public abstract class CommonControllerOverlay implements
     }
 
     @Override
-    public void showPlaying() {
+    public void showPlaying() { //재생
     	Log.d(TAG, "showPlaying");
     	mState = State.PLAYING;
         showMainView(mPlayPauseReplayView);
@@ -839,6 +840,7 @@ public abstract class CommonControllerOverlay implements
             mCastConnectingAnim.stop();
     }
 
+    //모든 클릭에 대한 이벤트 정의
     @Override
     public void onClick(View view) {
         if (mListener != null) {
@@ -996,7 +998,8 @@ public abstract class CommonControllerOverlay implements
             }
         }
 	}
-	
+
+
 	protected void updateViews() {
 		if(mBookmarkHidden && mCaptionHidden && mResolutionHidden) {
             mTitleView.setVisibility(View.VISIBLE);

@@ -56,7 +56,7 @@ public class MovieControllerOverlay extends CommonControllerOverlay implements
 	//화면 전환 예외처리 모델 정의
 	public static final String BUILD_MODEL_NEXUS_6P = "Nexus 6P";
 
-	private View mRootView;
+	private View mRootView; //moviePlayer 에서 넘어온 화면
     private boolean hidden = false;
 
     private final Handler handler;
@@ -201,7 +201,7 @@ public class MovieControllerOverlay extends CommonControllerOverlay implements
     	}
 
         mRootView.setLayoutParams(params);
-    	mRootView.setSystemUiVisibility(newVis);
+    	mRootView.setSystemUiVisibility(newVis); //전체화면모드 적용 유무
     }
 
     @Override

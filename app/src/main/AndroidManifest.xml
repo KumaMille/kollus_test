@@ -61,6 +61,7 @@
             android:configChanges="keyboard|keyboardHidden|uiMode|orientation|screenSize|screenLayout|smallestScreenSize|navigation"
             android:launchMode="singleTop"
             android:screenOrientation="sensor"
+            android:supportsPictureInPicture="true"
             android:windowSoftInputMode="adjustResize" />
         <receiver android:name=".MovieActivity$MediaButtonReceiver">
             <intent-filter>

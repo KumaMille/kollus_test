@@ -536,10 +536,10 @@
 
 			<include
 				android:id="@+id/resolution_list_layout"
+				layout="@layout/resolution_list"
 				android:layout_width="270dp"
 				android:layout_height="190dp"
-				android:layout_centerInParent="true"
-				layout="@layout/resolution_list" />
+				android:layout_centerInParent="true" />
 		</RelativeLayout>
 		<TextView 
 		    android:text="@string/waterMark"

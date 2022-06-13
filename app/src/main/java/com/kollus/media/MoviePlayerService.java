@@ -1,6 +1,7 @@
 package com.kollus.media;
 
 import android.app.Activity;
+import android.app.AppOpsManager;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -24,6 +25,7 @@ import android.view.KeyEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
 
+import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 
 import com.kollus.media.contents.MultiKollusContent;
@@ -44,15 +46,16 @@ public class MoviePlayerService extends Service {
 
     public static final int APP_FORGROUND	= 18;
     public static final int APP_BACKGROUND	= 19;
+    public static final int APP_PIP	= 20;
 
     private Messenger mMessenger = new Messenger(new LocalHandler());
     private Messenger mClientMessenger;
     private static Activity mActivity;
-    private static View mRootView;
+    private static View mRootView; //movie_view
     private static MoviePlayer mPlayer;
     private PowerManager.WakeLock mWakeLock;
     private WifiManager.WifiLock mWifiLock;
-    private boolean mBackgroundPlay;
+    private boolean mBackgroundPlay; //설정값에서 백그라운드 재생 유무
 
     private String mChannelId = "com.kollus.media.play";
     private String mChannelName = "Kollus Player Channel";
@@ -234,7 +237,7 @@ public class MoviePlayerService extends Service {
         mPlayer.setBluetoothConnectChanged(connect);
     }
 
-    protected static void setActivity(Activity activity) {
+    protected static void setActivity(Activity activity) { //movieActivity 바인딩
         mActivity = activity;
         mRootView = mActivity.findViewById(R.id.movie_view_root);
     }
@@ -320,6 +323,9 @@ public class MoviePlayerService extends Service {
                             startForeground(KollusConstants.SERVICE_PLAY, new Notification());
                         wakeLock();
                     }
+                    break;
+                case APP_PIP:
+                    Log.d(TAG, "APP_PIP");
                     break;
             }
         }
