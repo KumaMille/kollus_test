@@ -174,19 +174,13 @@
 			android:background="@color/darker_transparent"
 			android:layout_below="@id/title_layouts"
 			android:layout_alignParentRight="true"
-			android:visibility="gone"
+			android:visibility="visible"
 			android:focusable="false">
 			<LinearLayout 
 			    android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:orientation="horizontal">
-				<TextView 
-			        android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:text="PlayerType : "
-					android:textColor="@android:color/white"
-					android:textSize="15dp"/>
-			    <TextView 
+			    <TextView
 			        android:id="@+id/player_text"
 			        android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
@@ -197,13 +191,7 @@
 			    android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:orientation="horizontal">
-				<TextView 
-			        android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:text="CodecType : "
-					android:textColor="@android:color/white"
-					android:textSize="15dp"/>
-			    <TextView 
+			    <TextView
 			        android:id="@+id/codec_text"
 			        android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
@@ -214,13 +202,7 @@
 			    android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:orientation="horizontal">
-				<TextView 
-			        android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:text="Resolution : "
-					android:textColor="@android:color/white"
-					android:textSize="15dp"/>
-			    <TextView 
+			    <TextView
 			        android:id="@+id/resolution_text"
 			        android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
@@ -232,13 +214,7 @@
 				android:layout_height="wrap_content"
 				android:orientation="horizontal"
 				android:focusable="false">
-				<TextView 
-			        android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:text="FrameRate : "
-					android:textColor="@android:color/white"
-					android:textSize="15dp"/>
-			    <TextView 
+			    <TextView
 			        android:id="@+id/frame_rate_text"
 			        android:layout_width="wrap_content"
 					android:layout_height="wrap_content"

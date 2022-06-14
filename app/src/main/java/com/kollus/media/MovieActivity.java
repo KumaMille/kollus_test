@@ -16,7 +16,9 @@
 
 package com.kollus.media;
 
+import android.app.PendingIntent;
 import android.app.PictureInPictureParams;
+import android.app.RemoteAction;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothClass;
 import android.bluetooth.BluetoothDevice;
@@ -31,6 +33,7 @@ import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.graphics.drawable.Icon;
 import android.media.AudioFocusRequest;
 import android.media.AudioManager;
 import android.media.session.MediaSession;
@@ -108,6 +111,8 @@ public class MovieActivity extends BaseActivity {
 	private static final int SCROLL_H_DELICACY = 45;
 	private static final int SCROLL_V_DELICACY = 30;
 
+	private static final int REQUEST_CODE = 100;
+
 //	private WindowManager mWindowManager;
 //	private LayoutInflater mInflater;
 //	private View mRootGroup;
@@ -141,6 +146,7 @@ public class MovieActivity extends BaseActivity {
 
 	//etlim 20170902 Activity Exit ==> Broadcast Event
     private String ACTION_ACTIVITY_FINISH_MOVIE = "com.kollus.media.action.activity.finish.movie";
+    private String ACTION_ACTIVITY_ON_PAUSE_OR_PLAY_MOVIE = "com.kollus.media.action.activity.pause.or.play.movie";
 	private MovieActivityFinishBroadcastReceiver mMovieActivityFinishBR;
 
 	//etlim fixed. 20170808 navigation bar orientation issue, nexus P6.
@@ -226,18 +232,35 @@ public class MovieActivity extends BaseActivity {
 		if(AppUtil.isPipAbleSDK()) {
 			Rational aspectRatio = new Rational(16, 9);
 
+			Intent actionIntent = new Intent(ACTION_ACTIVITY_ON_PAUSE_OR_PLAY_MOVIE);
+			final PendingIntent pendingIntent = PendingIntent.getBroadcast(this, REQUEST_CODE, actionIntent, 0);
+
+			ArrayList<RemoteAction> actionList = new ArrayList<>();
+			RemoteAction action = new RemoteAction(
+					Icon.createWithResource(this,
+			R.drawable.btn_pause), "Info","Info Details", pendingIntent);
+
+			actionList.add(action);
+
 			PictureInPictureParams params = new PictureInPictureParams
 					.Builder()
 					.setAspectRatio(aspectRatio)
+					.setActions(actionList)
 					.build();
 			enterPictureInPictureMode(params);
 		}
 	}
 
+	//pip 모드 동작시 분기 처리(뷰 보일지 말지)
 	@Override
 	public void onPictureInPictureModeChanged (boolean isInPictureInPictureMode, Configuration newConfig) {
 		if (isInPictureInPictureMode) {
 			Log.d(TAG, "isInPictureInPictureMode ");
+			try {
+				mMessenger.send(Message.obtain(null , MoviePlayerService.APP_PIP ));
+			} catch (RemoteException e) {
+				e.printStackTrace();
+			}
 			// Hide the full-screen UI (controls, etc.) while in picture-in-picture mode.
 		} else {
 			// Restore the full-screen UI.
@@ -1113,6 +1136,7 @@ public class MovieActivity extends BaseActivity {
     	mMovieActivityFinishBR = new MovieActivityFinishBroadcastReceiver();
         IntentFilter filter = new IntentFilter();
         filter.addAction(ACTION_ACTIVITY_FINISH_MOVIE);
+        filter.addAction(ACTION_ACTIVITY_ON_PAUSE_OR_PLAY_MOVIE);
         registerReceiver(mMovieActivityFinishBR, filter);
     }
 
@@ -1129,9 +1153,13 @@ public class MovieActivity extends BaseActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-            } else if (action.equals("")) {
-                // do something
-            }
+            } else if (action.equals(ACTION_ACTIVITY_ON_PAUSE_OR_PLAY_MOVIE)) {
+				try {
+					mMessenger.send(Message.obtain(null , MoviePlayerService.RESUME_PAUSE ));
+				} catch (RemoteException e) {
+					e.printStackTrace();
+				}
+			}
         }
     }
 
@@ -1231,12 +1259,17 @@ public class MovieActivity extends BaseActivity {
 						e.printStackTrace();
 					}
                     break;
+				case MoviePlayerService.RESUME_PAUSE:
+
+					break;
             }
         }
     }
 
-	private Messenger mMessenger;
-	private boolean mBounded;
+	private Messenger mMessenger; //뮤직서비스 메신저 객체 (서비스 바인드)
+
+	private boolean mBounded; //바인딩 유무
+
 	private ServiceConnection mConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName componentName, IBinder service) {
@@ -1244,7 +1277,7 @@ public class MovieActivity extends BaseActivity {
             mMessenger = new Messenger(service);
             mBounded = true;
             try {
-                mMessenger.send(Message.obtain(null, MoviePlayerService.ADD_HANDLER, new ClientHandler()));
+                mMessenger.send(Message.obtain(null, MoviePlayerService.ADD_HANDLER, new ClientHandler())); //최초 서비스 바인드시 클라이언트 핸들러 객체 전달
             } catch (RemoteException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();

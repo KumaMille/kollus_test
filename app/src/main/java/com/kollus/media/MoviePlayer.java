@@ -1371,7 +1371,12 @@ public class MoviePlayer implements
         startVideo();
     }
 
-	@Override
+    @Override
+    public boolean isPlaying() {
+        return mVideoView.isPlaying();
+    }
+
+    @Override
 	public void onPlayingRate(@ValuePreference.PLAYING_RATE_MODE int mode) {
 		// TODO Auto-generated method stub
 		float playing_rate = mPlayingRate;
@@ -1495,6 +1500,10 @@ public class MoviePlayer implements
         mController.setMute(mVolumeMute);
         if(mVideoView != null)
             mVideoView.setMute(mVolumeMute);
+    }
+
+    public void hideUi(){
+        mController.hide();
     }
 	
 	public void setBrightnessLabel(int level) {

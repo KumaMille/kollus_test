@@ -154,7 +154,9 @@ public abstract class CommonControllerOverlay implements
     protected int mScreenSizeMode = KollusPlayerContentMode.ScaleAspectFit;
     protected int mABRepeat;
     protected boolean mRepeat;
-    
+
+    protected final LinearLayout mDebugLayout;
+
     protected final LinearLayout mPlayingRateView;
     protected final ImageView mPlayingRateUp;
     protected final TextView  mPlayingRateText;
@@ -197,6 +199,7 @@ public abstract class CommonControllerOverlay implements
     protected boolean mCanReplay = true;
     protected boolean mCaptionHidden = true;
     protected boolean mResolutionHidden = true;
+    protected boolean mDebugSpecificationHidden = true;
     protected boolean mBookmarkHidden = true;
     protected boolean mSelectBookmarkRemove = false;
     
@@ -473,9 +476,10 @@ public abstract class CommonControllerOverlay implements
         blinkAnimation = AnimationUtils.loadAnimation(mContext, R.anim.blink);
         mWaterMarkView = (TextView)mRootView.findViewById(R.id.water_mark);
 
-        View debugLayer = mRootView.findViewById(R.id.debug_layout);
-        if(Log.isDebug())
-        	debugLayer.setVisibility(View.VISIBLE);
+        mDebugLayout = mRootView.findViewById(R.id.debug_layout);
+
+        if(Log.isDebug()) mDebugLayout.setVisibility(View.INVISIBLE);
+
         mPlayerText = (TextView)mRootView.findViewById(R.id.player_text);
         mCodecText = (TextView)mRootView.findViewById(R.id.codec_text);
         mResolutionText = (TextView)mRootView.findViewById(R.id.resolution_text);
@@ -745,22 +749,22 @@ public abstract class CommonControllerOverlay implements
     
     @Override
     public void setPlayerTypeText(String type) {
-    	mPlayerText.setText(type);
+    	mPlayerText.setText("PlayerType : " + type);
     }
     
     @Override
     public void setCodecText(String codec) {
-    	mCodecText.setText(codec);
+    	mCodecText.setText("CodecType : " + codec);
     }
 
     @Override
     public void setResolutionText(int width, int height) {
-    	mResolutionText.setText(String.format("%dx%d", width, height));
+    	mResolutionText.setText("Resolution :" + String.format("%dx%d", width, height));
     }
     
     @Override
     public void setFrameRateText(int frameRate, int rejectRate) {
-    	mFrameRateText.setText(String.format("%d/%d", frameRate, rejectRate));
+    	mFrameRateText.setText("FrameRate :" + String.format("%d/%d", frameRate, rejectRate));
     }
     
     private void showMainView(View view) {
@@ -794,6 +798,7 @@ public abstract class CommonControllerOverlay implements
         hideBookmark();
         hideCaption();
         hideResolution();
+        hideSpecification();
     }
     
     @Override
@@ -945,6 +950,9 @@ public abstract class CommonControllerOverlay implements
             	else {
             		hideBookmark();
             	}
+            }
+            else if(view == mDebugLayout){
+
             }
             else if(view == mBookmarkAdd) {
             	mListener.onBookmarkAdd();

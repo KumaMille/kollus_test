@@ -66,6 +66,7 @@ public interface ControllerOverlay {
         void onShown();
         void onHidden();
         void onReplay();
+        boolean isPlaying();
         void onPlayingRate(@ValuePreference.PLAYING_RATE_MODE int mode);
         void onBookmarkHidden();
         void onToggleMute();
@@ -111,6 +112,8 @@ public interface ControllerOverlay {
     void hideCaption();
 
     void hideResolution();
+
+    void hideSpecification();
 
     void setAvailableMediaRoute(boolean visible);
 

@@ -49,7 +49,7 @@ public class MoviePlayerService extends Service {
     public static final int APP_PIP	= 20;
 
     private Messenger mMessenger = new Messenger(new LocalHandler());
-    private Messenger mClientMessenger;
+    private Messenger mClientMessenger; //movieActivity 의 메신저 객체
     private static Activity mActivity;
     private static View mRootView; //movie_view
     private static MoviePlayer mPlayer;
@@ -250,7 +250,7 @@ public class MoviePlayerService extends Service {
                 case ADD_HANDLER:
                     mClientMessenger = new Messenger((Handler) msg.obj);
                     try {
-                        mClientMessenger.send(Message.obtain(null, ADD_HANDLER, "Registed messanger"));
+                        mClientMessenger.send(Message.obtain(null, ADD_HANDLER, "Registed messanger")); // 최초 등록시 movieActivity 에 완료 콜백
                     } catch (RemoteException e) {
                         e.printStackTrace();
                     }
@@ -326,7 +326,10 @@ public class MoviePlayerService extends Service {
                     break;
                 case APP_PIP:
                     Log.d(TAG, "APP_PIP");
-                    break;
+                    if(mPlayer!= null) {
+                        mPlayer.hideUi();
+                        mPlayer.onPlayPause();
+                    }
             }
         }
     }
